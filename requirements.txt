@@ -1,0 +1,30 @@
+# This file is for installing the required packages for the project.
+ipykernel
+pandas
+numpy
+matplotlib
+plotly
+seaborn
+scipy
+scikit-learn
+imblearn
+xgboost
+catboost
+pymongo
+from_root
+evidently
+dill
+PyYAML
+neuro_mf
+boto3
+mypy-boto3-s3
+botocore
+fastapi
+uvicorn
+jinja2
+python-multipart
+
+
+#Installs the current directory as a Python package,our us_visa will be used as a package name.
+#without it,Need to reinstall after every change but when you added it Changes reflect instantly
+-e .
