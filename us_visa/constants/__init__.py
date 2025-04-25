@@ -9,33 +9,39 @@ from datetime import datetime
     They are typically defined in a separate module or file to keep the code organized and maintainable.
     Constants are usually written in uppercase letters to distinguish them from regular variables.
     This convention helps developers quickly identify constants in the code and understand their purpose.
+    Constants are often used for configuration settings, file paths, database names, and other values that are unlikely to change frequently.
+    By defining them in one place, it becomes easier to manage and update them as needed.
 """
 
-DATABASE_NAME = "US_VISA"
+DATABASE_NAME = "US_VISA" #Database name for MongoDB
 
-COLLECTION_NAME = "visa_data"
+## This is the default collection for general MongoDB operations.
+COLLECTION_NAME = "visa_data" #Collection name for MongoDB
 
 MONGODB_URL_KEY = "MONGODB_URL" #Connection string for MongoDB
 
-PIPELINE_NAME: str = "usvisa"
+PIPELINE_NAME: str = "usvisa" #Name of the pipeline for logging and tracking purposes in MLFlow
 
-ARTIFACT_DIR:str ="artifact"
+ARTIFACT_DIR:str ="artifact" #Directory where artifacts are stored after each pipeline run
 
-MODEL_FILE_NAME = "model.pkl"
+MODEL_FILE_NAME = "model.pkl" #File name for the trained model artifact after each pipeline run
 
-FILE_NAME: str ="Visadataset.csv"
+FILE_NAME: str ="Visadataset.csv" #File name for the dataset used in the project 
 
-TRAIN_FILE_NAME: str = "train.csv"
+TRAIN_FILE_NAME: str = "train.csv" #File name for the training dataset after splitting
 
-TEST_FILE_NAME: str = "test.csv"
+TEST_FILE_NAME: str = "test.csv" #File name for the testing dataset after splitting
 
 
 
 """Data Ingestion related constants start with DATA_INGESTION VAR NAME"""
 
-DATA_INGESTION_COLLECTION_NAME: str = "visa_data"
-DATA_INGESTION_DIR_NAME: str = "data_ingestion"
-DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
-DATA_INGESTION_INGESTED_DIR: str = "ingested"
-DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.2
+# This is specific to the data ingestion pipeline. 
+# Today, it points to the same collection, but in the future, 
+# it might reference a dedicated ingestion collection (e.g., "visa_data_raw").
+DATA_INGESTION_COLLECTION_NAME: str = "visa_data" #Collection name for MongoDB for data ingestion component 
+DATA_INGESTION_DIR_NAME: str = "data_ingestion" #Directory name for data ingestion artifacts 
+DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store" #Directory name for feature store artifacts 
+DATA_INGESTION_INGESTED_DIR: str = "ingested" #Directory name for ingested data artifacts 
+DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.2 #Ratio for splitting the dataset into training and testing sets
 
