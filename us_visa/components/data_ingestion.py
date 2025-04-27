@@ -12,8 +12,10 @@ from us_visa.data_access.usvisa_data import USvisaData  # Class to fetch data fr
 
 class DataIngestion:
     def __init__(self,data_ingestion_config:DataIngestionConfig=DataIngestionConfig()):
+        
         """
-        :param data_ingestion_config: configuration for data ingestion
+        parameter: data_ingestion_config: configuration for data ingestion
+
         """
         try:
             #Initialize with a configuration object (uses values from constants)

@@ -14,8 +14,7 @@ class USvisaData:
     """
 
     def __init__(self):
-        """
-        """
+       
         try:
             self.mongo_client = MongoDBClient(database_name=DATABASE_NAME)
         except Exception as e:
@@ -34,9 +33,11 @@ class USvisaData:
                 collection = self.mongo_client[database_name][collection_name]
 
             df = pd.DataFrame(list(collection.find()))
+
             if "_id" in df.columns.to_list():
                 df = df.drop(columns=["_id"], axis=1)
             df.replace({"na":np.nan},inplace=True)
             return df
+        
         except Exception as e:
             raise USvisaException(e,sys)
