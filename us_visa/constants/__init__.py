@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from datetime import date
 
 
 """Constants for the US Visa Prediction project.
@@ -32,6 +33,16 @@ TRAIN_FILE_NAME: str = "train.csv" #File name for the training dataset after spl
 
 TEST_FILE_NAME: str = "test.csv" #File name for the testing dataset after splitting
 
+TARGET_COLUMN = "case_status" #Target column in the dataset, which is the label we want to predict
+
+CURRENT_YEAR = date.today().year 
+
+PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl" #File name for the preprocessing object artifact after each pipeline run
+
+SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml") #Path to the schema file for data validation and preprocessing
+
+
+
 
 
 """Data Ingestion related constants start with DATA_INGESTION VAR NAME"""
@@ -45,3 +56,12 @@ DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store" #Directory name for feat
 DATA_INGESTION_INGESTED_DIR: str = "ingested" #Directory name for ingested data artifacts 
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.2 #Ratio for splitting the dataset into training and testing sets
 
+
+"""
+Data Validation realted contant start with DATA_VALIDATION VAR NAME
+
+"""
+
+DATA_VALIDATION_DIR_NAME: str = "data_validation" #Directory name for data validation artifacts
+DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report" #Directory name for drift report artifacts
+DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str = "report.yaml" #File name for the drift report artifact
