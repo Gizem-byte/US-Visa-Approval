@@ -1,12 +1,12 @@
 import sys
 from typing import Tuple
 
-import numpy as np
-import pandas as pd
-from pandas import DataFrame
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
-from neuro_mf  import ModelFactory
+import numpy as np 
+import pandas as pd  
+from pandas import DataFrame  
+from sklearn.pipeline import Pipeline  
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score  
+from neuro_mf  import ModelFactory  
 
 from us_visa.exception import USvisaException
 from us_visa.logger import logging
