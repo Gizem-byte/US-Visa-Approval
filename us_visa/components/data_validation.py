@@ -7,7 +7,6 @@ from evidently.legacy.report import Report
 from evidently.legacy.metric_preset import DataDriftPreset
 from evidently.legacy.metric_preset import TargetDriftPreset
 from evidently import Dataset
-from evidently.legacy.pipeline.column_mapping import ColumnMapping
 
 
 from pandas import DataFrame
