@@ -42,6 +42,9 @@ PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl" #File name for the preproces
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml") #Path to the schema file for data validation and preprocessing
 
 
+AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
+AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
+REGION_NAME = "eu-north-1"
 
 
 
@@ -85,3 +88,17 @@ MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
 MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
 MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
 MODEL_TRAINER_MODEL_CONFIG_FILE_PATH: str = os.path.join("config", "model.yaml")
+
+
+
+
+"""
+MODEL EVALUATION related constant 
+"""
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_BUCKET_NAME = "usvisa-gizem-bucket2025"
+MODEL_PUSHER_S3_KEY = "model-registry"
+
+
+APP_HOST = "127.0.0.1"
+APP_PORT = 8080
